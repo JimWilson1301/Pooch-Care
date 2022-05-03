@@ -34,26 +34,96 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body>
-    <header class="header">
-      <div class="container">
+    <header class="header" id="header">
+      <div class="my-container">
         <a href="index.html" class="logo">
           <span>Pooch Care</span>
         </a>
-        <nav class="navbar">
-          <a href="#" class="active">Home</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
+        <nav class="navbar" id="myTopnav">
+          <a href="./index.html" class="active">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./services.html">Services</a>
           <a href="#">Galerry</a>
-          <a href="#">Blog</a>
+          <div class="dropdown">
+            <a
+              href="#"
+              role="button"
+              data-toggle="dropdown"
+              data-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              >Blog
+              <i class="fa-solid fa-angle-down" style="font-size: 10px"></i
+            ></a>
+            <ul class="dropdown-menu" id="navbarNavAltMarkup">
+              <li><a class="dropdown-item" href="#">Blog Posts</a></li>
+              <li><a class="dropdown-item" href="#">Blog single</a></li>
+              <li><a class="dropdown-item" href="#">Landing Page</a></li>
+            </ul>
+          </div>
           <a href="#">Contact</a>
           <span><i class="fa-solid fa-moon"></i></span>
         </nav>
       </div>
+
+      <div class="container-reponsive" id="container-reponsive">
+        <nav class="navbar navbar-expand-lg navbar-dark" id="navbar-reponsive">
+          <div
+            class="container-fluid flex align-items-center"
+            id="container-fluid"
+          >
+            <a href="index.html" class="logo">
+              <span>Pooch Care</span>
+            </a>
+            <div>
+              <span><i class="fa-solid fa-moon moon-icon"></i></span>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                onclick="myFunction()"
+                id="open-button"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <!-- ml-auto still works just fine-->
+              <div class="navbar-nav text-center navbar-reponsive">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./services.html">Services</a>
+                <a class="nav-link" href="#">Gallery</a>
+                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#">Contact</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
+
     <section id="owl-one" class="carousel owl-carousel owl-theme">
       <div class="item item-1">
         <div class="content">
@@ -108,8 +178,9 @@
         </div>
       </div>
     </section>
+
     <section class="about-us">
-      <div class="container">
+      <div class="my-container">
         <h2>ABOUT US</h2>
         <h3>We Love Your Pets Like They Are Our Own</h3>
         <p>
@@ -122,7 +193,7 @@
       </div>
     </section>
     <section class="activities">
-      <div class="container">
+      <div class="my-container">
         <div class="list">
           <div class="item">
             <i class="fa-solid fa-snowflake"></i>
@@ -182,7 +253,7 @@
       </div>
     </section>
     <section class="why-choose-us">
-      <div class="container">
+      <div class="my-container">
         <img src="./img/ab.jpg" alt="why-choose-us" />
         <div>
           <h2>WHY CHOOSE US</h2>
@@ -219,34 +290,34 @@
       </div>
     </section>
     <section class="statistics">
-      <div class="container">
+      <div class="my-container">
         <div class="item">
-          <h2>730</h2>
+          <h2 class="counter">730</h2>
           <span>Happy Clients</span>
         </div>
         <div class="item">
-          <h2>80</h2>
+          <h2 class="counter">80</h2>
           <span>Professionals</span>
         </div>
         <div class="item">
-          <h2>812</h2>
+          <h2 class="counter">812</h2>
           <span>Adopted Pets</span>
         </div>
         <div class="item">
-          <h2>90</h2>
+          <h2 class="counter">90</h2>
           <span>Awards</span>
         </div>
       </div>
     </section>
     <section class="plans">
       <header class="title">
-        <div class="container">
+        <div class="my-container">
           <h3>Our Plans</h3>
           <span>Affordable Packages</span>
         </div>
       </header>
       <main class="main">
-        <div class="container">
+        <div class="my-container">
           <div class="item">
             <h3>Free Package</h3>
             <h4><label>$</label>0<span>/month</span></h4>
@@ -290,7 +361,7 @@
       </main>
     </section>
     <section class="nutrition">
-      <div class="container">
+      <div class="my-container">
         <h3>BETTER PET NUTRITION.</h3>
         <span>The Finest Fresh Food And All Your Pet Needs.</span>
         <p>
@@ -299,18 +370,42 @@
           amet elit consec tetur adipisi elit. Iure voluptatibus explicabo
           officia.
         </p>
-        <img src="./img/banner2.jpg" alt="banner2" />
+        <div class="photo">
+          <img src="./img/banner2.jpg" alt="banner2" />
+          <a href="#" onclick="toggle();">
+            <span class="video-play-icon">
+              <span class="fa fa-play"></span>
+            </span>
+          </a>
+        </div>
+
+        <div class="trailer">
+          <iframe
+            src="https://player.vimeo.com/video/101587706?h=187bfc0989"
+            width="640"
+            height="298"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <img
+            src="./img/close.png"
+            alt="close"
+            class="close"
+            onclick="stopVideos()"
+          />
+        </div>
       </div>
     </section>
     <section class="testimonials">
       <header class="title">
-        <div class="container">
+        <div class="my-container">
           <h2>TESTIMONIALS</h2>
           <h3>Happy Clients & Feedbacks</h3>
         </div>
       </header>
       <main class="main">
-        <div id="owl-two" class="container owl-carousel owl-theme">
+        <div id="owl-two" class="my-container owl-carousel owl-theme">
           <div class="item">
             <blockquote>
               <q
@@ -417,7 +512,7 @@
       </main>
     </section>
     <section class="updated">
-      <div class="container">
+      <div class="my-container">
         <h2>Stay Updated!</h2>
         <p>
           Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
@@ -437,7 +532,7 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="container">
+      <div class="my-container">
         <div class="info">
           <div class="detail">
             <h2>Contact information</h2>
@@ -519,10 +614,11 @@
         nav: false,
         responsive: {
           0: {
-            items: 2,
+            items: 1,
+            dots: 0,
           },
           600: {
-            items: 2,
+            items: 1,
           },
           1000: {
             items: 2,
@@ -530,6 +626,15 @@
         },
       });
     </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src=" https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "></script>
+    <script src=" https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

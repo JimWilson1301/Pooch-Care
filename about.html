@@ -20,22 +20,87 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/about.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="container">
+    <header class="header" id="header">
+      <div class="my-container">
         <a href="index.html" class="logo">
           <span>Pooch Care</span>
         </a>
-        <nav class="navbar">
-          <a href="#">Home</a>
-          <a href="#" class="active">About</a>
-          <a href="#">Services</a>
+        <nav class="navbar" id="myTopnav">
+          <a href="./index.html">Home</a>
+          <a href="./about.html" class="active">About</a>
+          <a href="./services.html">Services</a>
           <a href="#">Galerry</a>
-          <a href="#">Blog</a>
+          <div class="dropdown">
+            <a
+              href="#"
+              role="button"
+              data-toggle="dropdown"
+              data-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              >Blog
+              <i class="fa-solid fa-angle-down" style="font-size: 10px"></i
+            ></a>
+            <ul class="dropdown-menu" id="navbarNavAltMarkup">
+              <li><a class="dropdown-item" href="#">Blog Posts</a></li>
+              <li><a class="dropdown-item" href="#">Blog single</a></li>
+              <li><a class="dropdown-item" href="#">Landing Page</a></li>
+            </ul>
+          </div>
           <a href="#">Contact</a>
           <span><i class="fa-solid fa-moon"></i></span>
+        </nav>
+      </div>
+
+      <div class="container-reponsive" id="container-reponsive">
+        <nav class="navbar navbar-expand-lg navbar-dark" id="navbar-reponsive">
+          <div
+            class="container-fluid flex align-items-center"
+            id="container-fluid"
+          >
+            <a href="index.html" class="logo">
+              <span>Pooch Care</span>
+            </a>
+            <div>
+              <span><i class="fa-solid fa-moon moon-icon"></i></span>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                onclick="myFunction()"
+                id="open-button"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <!-- ml-auto still works just fine-->
+              <div class="navbar-nav text-center navbar-reponsive">
+                <a class="nav-link" aria-current="page" href="./index.html"
+                  >Home</a
+                >
+                <a class="nav-link active" href="./about.html">About</a>
+                <a class="nav-link" href="./services.html">Services</a>
+                <a class="nav-link" href="#">Gallery</a>
+                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#">Contact</a>
+              </div>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
@@ -49,7 +114,7 @@
       </div>
     </section>
     <section class="about">
-      <div class="container">
+      <div class="my-container">
         <div class="col-left">
           <h2>ABOUT US</h2>
           <h3>We Have 10+ Years Of Experience.</h3>
@@ -72,7 +137,7 @@
       </div>
     </section>
     <section class="history">
-      <div class="container">
+      <div class="my-container">
         <h2>OUR HISTORY OF POOCH CARE</h2>
         <h3>Our History</h3>
         <p>
@@ -103,7 +168,7 @@
       </div>
     </section>
     <section class="who-we-are">
-      <div class="container">
+      <div class="my-container">
         <div class="col-left">
           <h2>WHO WE ARE</h2>
           <h3>Why Choose Us</h3>
@@ -159,7 +224,7 @@
       </div>
     </section>
     <section class="our-experts">
-      <div class="container">
+      <div class="my-container">
         <header class="title">
           <h2>OUR EXPERTS</h2>
           <h3>Our Team</h3>
@@ -219,7 +284,7 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="container">
+      <div class="my-container">
         <div class="info">
           <div class="detail">
             <h2>Contact information</h2>
@@ -273,5 +338,51 @@
         </div>
       </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src=" https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "></script>
+    <script src=" https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js "></script>
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50
+        ) {
+          document.getElementById("header").style.height = "80px";
+        } else {
+          document.getElementById("header").style.height = "90px";
+        }
+      }
+
+      var open = true;
+
+      function myFunction() {
+        var container_reponsive = document.getElementById(
+          "container-reponsive"
+        );
+        container_reponsive.classList.toggle("open");
+        var navbar_reponsive = document.getElementById("navbar-reponsive");
+        navbar_reponsive.classList.toggle("open");
+        var container_fluid = document.getElementById("container-fluid");
+        container_fluid.classList.toggle("open");
+
+        var open_button = document.getElementById("open-button");
+
+        if (open) {
+          open_button.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+          open = false;
+        } else {
+          open_button.innerHTML = `<i class="fa fa-bars"></i>`;
+          open = true;
+        }
+      }
+    </script>
   </body>
 </html>
