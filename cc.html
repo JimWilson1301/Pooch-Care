@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/services.css" />
+  </head>
+  <body>
+    <!-- Large button groups (default and split) -->
+    
+      <div class="dropdown">
+        <a
+          class="dropdown-toggle"
+          role="button"
+          data-toggle="dropdown"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        > hi nha
+        </a>
+        <ul class="dropdown-menu"  id="navbarNavAltMarkup">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+      </div>
+
+      <div class="dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-target="#navbarNavAltMarkup" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Blog<span class="fa fa-angle-down"></span>
+        </a>
+        <div class="dropdown-menu show" id="navbarNavAltMarkup">
+            <a class="dropdown-item" href="blog.html">Blog Posts</a>
+            <a class="dropdown-item" href="blog-single.html">Blog single</a>
+             <a class="dropdown-item" href="landing-single.html">Landing Page</a>
+        </div>
+      </div>
+    
+
+    <!-- <div class="dropdown">
+      <a
+        class="btn btn-secondary dropdown-toggle"
+        href="#"
+        role="button"
+        id="dropdownMenuLink"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Dropdown link
+      </a>
+
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div> -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src=" https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "></script>
+    <script src=" https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js "></script>
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50
+        ) {
+          document.getElementById("header").style.height = "80px";
+        } else {
+          document.getElementById("header").style.height = "90px";
+        }
+      }
+
+      function myFunction() {
+        var container_reponsive = document.getElementById(
+          "container-reponsive"
+        );
+        container_reponsive.classList.toggle("open");
+        var navbar_reponsive = document.getElementById("navbar-reponsive");
+        navbar_reponsive.classList.toggle("open");
+        var container_fluid = document.getElementById("container-fluid");
+        container_fluid.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
